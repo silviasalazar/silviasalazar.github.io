@@ -1,0 +1,706 @@
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--code-->
+    <link rel="stylesheet" href="./styles/arduino-light.min.css">
+<script src="./highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+
+    <title>DISPOSITIVO DE INCLUSION</title>
+</head>
+
+<body>
+    <!--Aqui va el header-->
+    <div class="container" >
+        <header class="head my-3" >
+            <nav class="navbar navbar-expand-lg navbar-light head__custom-nav">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="assets/images/logo.png" alt="website logo">
+                    <span>Dispositivo de Inclusión</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span><img src="assets/images/menu2.png" alt=""></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section">¿Cómo lo hago?</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.arduino.cc/en/software" target="_blank">Descargar Software</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row custom-section d-flex align-items-center">
+            <div class="col-12 col-lg-4">
+                <h2>TUTORIAL</h2>
+                <h4>Dispositivo de Inclusión</h4>
+                
+                <a href="#section">Empezar</a>
+            </div>
+            <div class="col-12 col-lg-8" >
+                <img src="https://www.pinclipart.com/picdir/big/48-486600_learn-more-team-isometric-illustration-clipart.png" alt="Team process banner" style="max-height: 650px;">
+            </div>
+        </div>
+    </div>
+
+
+    <!--Indice y contenido-->
+    <div class="container1" id="container1">
+
+    
+    <!--indece-->
+    <div id="indice" >
+        <ol>
+          <li>
+            <a href="#section">Elección de materiales</a>
+            <ul>
+                <li><a href="#material">Materiales</a></li>
+                <li><a href="#herramientas">Herramientas</a></li>
+                <li><a href="#requerimientos">Requerimientos especificos</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#introduction">Introducción al IDE Arduino</a>
+                <ul>
+                    <li><a href="#que_es">¿Qué es?</a></li>
+                    <li><a href="#descarga">Descarga IDE Arduino</a></li>
+                    <li><a href="#estructura">Estructura básica</a></li>
+                </ul>
+          </li>
+          <li>
+            <a href="#code">Codificación</a>
+            <ul>
+                <li><a href="#prot5">Dispositivo con 5 botones</a></li>
+                <li><a href="#prot8">Dispositivo con 8 botones</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#armado">Armado</a>
+            <ul>
+                <li><a href="#d5">Dispositivo con 5 botones</a></li>
+                <li><a href="#d8">Dispositivo con 8 botones</a></li>
+                <li><a href="#soldado">Tutorial de soldado</a></li>
+                
+            </ul>
+          </li>
+        </ol>
+      </div>
+      
+    <!--Aqui va seccion de contenido-->
+    <div class="section" id="section">
+        <div class="materials" id="materials">
+            <h1  style="color: #1EA5F7;">1. Elección de materiales</h1>
+            <p>
+                La elección de los materiales viene dada en función de lo que tengas, no obstante es preciso 
+                contemplar la duración que este material le pueda dar a nuestro dispositivo, con ello aconsejamos 
+                utilizar materiales a base de madera como material principal aunque con la posibilidad de utilizar
+                 plástico, cartones duros o incluso una impresora 3d si en tu caso cuentas con una ya que el 
+                 gabinete en donde insertamos tu circuito necesitaremos adecuarlo a lo que necesitemos, más sin 
+                 embargo aquí veremos una estructura básica de la que puedes partir.
+
+            </p>
+            <h2 id="material">Materiales</h2>
+            <p>
+                Los materiales que necesitaremos dependerá del material que lo hagamos, en nuestro caso utilizamos madera 
+                y necesitaremos: <br><br>
+                
+            </p>
+            <ul>
+                <li>
+                <b> Madera </b> (preferente no muy gruesa, con 9mm de grosor bastaría), pueden ser tablas de preferencia de al menos 
+            15  centímetros de largo y alto para la base y la tapa para que no estén tan cerca los botones y los 
+            costados adaptados dependiendo del largo de tu base cambiaras donde dice 23 cm, una vez unidos quedando 
+            una estructura como la siguiente:
+            </li> 
+            </ul>
+            <div id="imagenes">
+                <img src="assets/images/dimensiones.PNG" alt="dimensiones" >
+            </div>
+            
+            <ul>
+            <li>
+               <b> 5 a 8 botones </b> estos pueden ser botones sanwa   tipo arcade, esto condiciona el 
+               diámetro  de las perforaciones de la tapadera de tu gabinete, los botones tipo arcade tienen 
+               un diámetro de 32.8mm y los tipo sanwa de 3.3 mm.
+
+            </li>
+            <li>
+                <b>1 a 2 mts de alambre de cobre </b> de preferencia al menos 2 colores diferentes para que no
+                 te confundas entre positivo y negativo, no obstante si eres cuidadoso y por la simpleza del 
+                 circuito puedes utilizar de sólo 1, igual si tienes un cable ethernet que no utilices, puedes 
+                 obtener mucho alambre util de el.
+
+
+            </li>
+
+            <li>
+                <b> Clavos o tornillos </b> de preferencia no muy gruesos con 1.5mm a 2mm de grosor servirá, acorde 
+                al grosor de la madera o plástico  que utilices.
+
+            </li>
+
+            <li>
+                <b>1 Arduino “Micro Pro” </b> (si posees un arduino  leonardo también servirá no obstante se recomienda 
+                micro pro por que se soldara, si no tienes experiencia soldando pasa a la sección de soldado 
+                básico para puedas hacerlo sin poner en riesgo tu  arduino).
+
+            </li>
+            <li>Soldadura de estaño, con un tubo de 17 gramos  será más que suficiente.</li>
+
+            <li>Placa perfo</li>
+
+            <li>Barras de silicona para pistola(opcional)</li>
+
+            <li>Placa Fenólica Perforada Tipo Protoboard 7x14.5 cm</li>
+            <li>Lija de madera(solo si amerita en las perforaciones de la tapa y bordes)</li>
+            </ul>
+            
+            <h2 id="herramientas">Herramientas</h2>
+            <ul>
+                <li>
+                    Cautin, si no cuentas con uno no te preocupes, el tipo  de cautín que ocupas suele ser muy 
+                    accesible costando hasta 7-8 dólares.
+                </li>
+                <li>
+                    Martillo y/o destornillador, dependiendo si usas clavos o tornillos.
+
+                </li>
+                <li>
+                    Serrucho, sierra de arco o sierra eléctrica, con lo que cuentes para cortar madera.
+
+                </li>
+                <li>
+                    Lo siguiente es opcional y puedes hacerlo perfectamente sin necesidad de nada de esto, 
+                    taladro con broca para cortar círculos de 2” o acorde al diámetro de tus botones, pinzas 
+                    de corte y punta,protoboard(para pruebas suele ser útil) pistola de silicona, en el caso  
+                    de los círculo si no cuentas con brocas circulares de la medida puedes realizar los orificios 
+                    con un martillo y un clavo yendo perforando a lo largo de la arista solo  necesitarás lijar 
+                    después para limpiar bordes irregulares, es un proceso más lento pero servirá .
+
+                </li>
+            </ul>
+            <h2 id="requerimientos">Requerimientos especificos</h2>
+            <ul>
+                <li>Tener un Sistema Operativo Windows 7 o superior, MAC OS X o Linux: 32 bits, 64 bits, ARM, ARM64.</li>
+                <li>Para programar Arduino desde un Chromebook, puede usar el <a href="https://create.arduino.cc/editor">Editor Web</a> Arduino en Arduino Cloud. La versión de escritorio del IDE no está disponible en Chrome OS.</li>
+            </ul>
+               
+        </div>
+        <!--Aqui va el Tutorial-->
+        <div class="introduction" id="introduction">
+            <h1 style="color: #1EA5F7;">2. Introducción al IDE de Arduino</h1>
+        
+            <p>
+                Para programar nuestros Arduinos, vamos a necesitar descargar a nuestros computadores el programa 
+                de IDE Arduino, el cual es la plataforma donde desarrollaremos todos nuestros programas y además a 
+                través de este programaremos el chip de Arduino (Leonardo o Micro Pro).
+            </p>
+            <h2 id="que_es">¿Qué es?</h2>
+            <p>
+                El IDE es un conjunto de herramientas de software que permiten a los programadores desarrollar 
+                y grabar todo el código necesario para hacer que nuestro Arduino funcione como queramos. El IDE 
+                de Arduino nos permite escribir, depurar, editar y grabar nuestro programa (llamados “sketches”
+                 en el mundo Arduino) de una manera sumamente sencilla, en gran parte a esto se debe el éxito de 
+                 Arduino, a su accesibilidad.
+            </p>
+            <div id="imagenes">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/2560px-Arduino_Logo.svg.png" alt="ide arduino" style="width: 300px; height: 200px;" >
+            </div>
+
+            <h2 id="descarga">Descarga IDE Arduino</h2>
+            <p>
+                Para descargar la versión más reciente de Arduino IDE puedes hacerlo a través de la página 
+                oficial.
+                
+
+            </p>
+
+            <a href="https://www.arduino.cc/en/software" target="_blank">Descargar IDE Arduino</a>
+
+            <h2 id="estructura">Estructura básica</h2>
+            <p>
+                Una vez hemos instalado nuestro Arduino IDE, notarás que por defecto el programa muestra 2 
+                funciones (Si no aparecen en tu arduino ide, deberás digitarlas manualmente):
+            </p>
+            
+            <pre>
+                <code>
+                    void  setup() {
+                        // put your setup code here, to run once:
+                      
+                      }
+                      
+                      void loop() {
+                        // put your main code here, to run repeatedly:
+                      
+                      }
+                </code>
+            </pre>
+
+            <p>
+                Donde evidenciamos 3 partes importantes:
+            </p>
+            <ul>
+                <li>
+                    <b>Zona de declaraciones: </b>Se encuentra arriba de la función «void setup», en esta parte 
+                    vamos a declarar todo lo que necesitemos en nuestro programa como variables, funciones, 
+                    objetos, y estructuras.
+
+                </li>
+                <li>
+                    <b>Función void setup:  </b>Esta función se ejecuta una única vez cada vez que se enciende la 
+                    placa de Arduino, o se pulsa la tecla Reset. Dentro de esta función se configuran todos los 
+                    dispositivos periféricos que deseamos usar en nuestro proyecto de Arduino.
+
+                </li>
+                <li>
+                    <b>Función void loop:</b>Como su nombre lo indica, es una función de ciclo infinito, la cual se ejecuta infinitamente hasta que el Arduino sea desenergizado.
+
+                </li>
+            </ul>
+
+        
+               
+        </div>
+
+        <!--Aqui va el Tutorial-->
+        <div class="code" id="code">
+            <h1 style="color: #1EA5F7;">3. Código</h1>
+            <h2 id="prot5">Dispositivo de 5 botones</h2>
+            <p>Para realizar la botonera con 5 botones (arriba, abajo, izquierda, derecha y click) estaremos utilizando el siguiente código:</p>
+            <div class="codigo5b" >
+                <pre>
+                    <code id="codigo5b">
+                        //Botonera
+//#include <Mouse.h>//libreria a utilizar
+#include <Mouse.h>
+
+// Les asigno  el pin a mis 5 botones:
+
+const int upButton = 2;//arriba
+
+const int downButton = 3;//abajo
+
+const int leftButton = 4;//izquierda
+
+const int rightButton = 5;//derecha
+
+const int mouseButton = 6;//Click izquierdo
+
+const int mouseRigthButton = 8;//click derecho
+
+const int scrollup = 7;//scroll hacia arriba
+
+const int scrolldown = 9;//scroll hacia abajo
+
+int range = 5;              //Salida de rango de X lo Y  de movimiento, afecta la velocidad de movimiento
+int responseDelay = 10;     //Tiempo de respuesta en milisegundos 
+int responseDelayScroll = 25; //Tiempo de respuesta en milisegundos  del scroll(esque iba muy rapido)
+
+void setup() {//Codigo que solo se inicia una vez
+
+  //Inicializo los botones de entrada 
+
+
+  pinMode(downButton, INPUT);
+
+  pinMode(leftButton, INPUT);
+
+  pinMode(rightButton, INPUT);
+
+  pinMode(mouseButton, INPUT);
+
+  pinMode(mouseRigthButton, INPUT);
+
+  pinMode(scrollup, INPUT);
+
+  pinMode(scrolldown, INPUT);
+
+  digitalWrite(7, LOW);//Le digo el pin y estado inicial
+  // Inicializo el uso de la libreria:
+
+  Mouse.begin();
+}
+
+void loop() {//Codigo que se inicia en loop
+
+  // Lectura de los estados de los botones(high o down):
+
+  int upState = digitalRead(upButton);
+
+  int downState = digitalRead(downButton);
+
+  int rightState = digitalRead(rightButton);
+  pinMode(upButton, INPUT);
+
+  int leftState = digitalRead(leftButton);
+
+  int clickState = digitalRead(mouseButton);
+
+  int clickRightState = digitalRead(mouseRigthButton);
+
+  int scrollupState = digitalRead(scrollup);
+
+  int scrolldownState = digitalRead(scrolldown);
+
+  // calculate the movement distance based on the button states:
+
+  int  xDistance = (leftState - rightState) * range;
+
+  int  yDistance = (upState - downState) * range;
+
+  // Si X o Y son distintos de cero, move:
+
+  if ((xDistance != 0) || (yDistance != 0)) {
+
+    Mouse.move(xDistance, yDistance, 0);
+
+  }
+
+
+  // Si el boton esta siendo presionado:
+  if (clickState == HIGH) {
+
+    // Si no esta siendo presionado ,  presiónelo:
+
+    if (!Mouse.isPressed(MOUSE_LEFT)) {
+
+      Mouse.press(MOUSE_LEFT);
+
+    }
+
+  }//fin if click state
+
+  // de lo contrario, no se presiona el botón del mouse:
+
+  else {
+
+// si se presiona el mouse, suéltelo:
+
+    if (Mouse.isPressed(MOUSE_LEFT)) {
+
+      Mouse.release(MOUSE_LEFT);
+
+    }
+
+  }
+
+//Condicionales para movimiento del scroll respecto al pin digital que los ponga
+  if (digitalRead(8) == HIGH) {//Es el pin digital del scroll up si lo cambias cambias este parametro 
+    Mouse.move(xDistance, yDistance, 1);
+    delay(responseDelayScroll);
+  }
+    if (digitalRead(7) == HIGH) {//Es el pin digital del scroll up si lo cambias cambias este parametro 
+    Mouse.move(xDistance, yDistance, -1);
+    delay(responseDelayScroll);
+  }
+
+
+//Codigo para click derecho que esta en el pin digital 9 del arduino
+  if(digitalRead(9) == HIGH)
+  {
+        // Si no esta siendo presionado ,  presiónelo:
+
+    if (!Mouse.isPressed(MOUSE_RIGHT)) {
+
+      Mouse.press(MOUSE_RIGHT);
+    
+     }
+  }
+  
+  else {
+
+// si se presiona el mouse, suéltelo:
+
+    if (Mouse.isPressed(MOUSE_RIGHT)) {
+
+      Mouse.release(MOUSE_RIGHT);
+
+    }
+
+  }
+  
+  //Llamo a mi funcion de retardo en respuesta para que no se mueva muy rapido :
+  delay(responseDelay);
+}
+                    </code>
+                </pre>
+            </div>
+            <h2 id="prot8">Dispositivo de 8 botones</h2>
+            <p>
+                Para realizar la botonera con 8 botones estaremos utilizando el siguiente código:
+            </p>
+            <div class="codigo8b" >
+                <pre>
+                    <code id="codigo8b">
+                        //Botonera
+//#include <Mouse.h>//libreria a utilizar
+#include <Mouse.h>
+
+// Les asigno  el pin a mis 5 botones:
+
+const int upButton = 2;//arriba
+
+const int downButton = 3;//abajo
+
+const int leftButton = 4;//izquierda
+
+const int rightButton = 5;//derecha
+
+const int mouseButton = 6;//Click izquierdo
+
+const int mouseRigthButton = 8;//click derecho
+
+const int scrollup = 7;//scroll hacia arriba
+
+const int scrolldown = 9;//scroll hacia abajo
+
+int range = 5;              //Salida de rango de X lo Y  de movimiento, afecta la velocidad de movimiento
+int responseDelay = 15;     //Tiempo de respuesta en milisegundos 
+int responseDelayScroll = 25; //Tiempo de respuesta en milisegundos  del scroll(esque iba muy rapido)
+
+void setup() {//Codigo que solo se inicia una vez
+
+  //Inicializo los botones de entrada 
+
+
+  pinMode(downButton, INPUT);
+
+  pinMode(leftButton, INPUT);
+
+  pinMode(rightButton, INPUT);
+
+  pinMode(mouseButton, INPUT);
+
+  pinMode(mouseRigthButton, INPUT);
+
+  pinMode(scrollup, INPUT);
+
+  pinMode(scrolldown, INPUT);
+
+  digitalWrite(7, LOW);//Le digo el pin y estado inicial
+  // Inicializo el uso de la libreria:
+
+  Mouse.begin();
+}
+
+void loop() {//Codigo que se inicia en loop
+
+  // Lectura de los estados de los botones(high o down):
+
+  int upState = digitalRead(upButton);
+
+  int downState = digitalRead(downButton);
+
+  int rightState = digitalRead(rightButton);
+  pinMode(upButton, INPUT);
+
+  int leftState = digitalRead(leftButton);
+
+  int clickState = digitalRead(mouseButton);
+
+  int clickRightState = digitalRead(mouseRigthButton);
+
+  int scrollupState = digitalRead(scrollup);
+
+  int scrolldownState = digitalRead(scrolldown);
+
+  // calculate the movement distance based on the button states:
+
+  int  xDistance = (leftState - rightState) * range;
+
+  int  yDistance = (upState - downState) * range;
+
+  // Si X o Y son distintos de cero, move:
+
+  if ((xDistance != 0) || (yDistance != 0)) {
+
+    Mouse.move(xDistance, yDistance, 0);
+
+  }
+
+
+  // Si el boton esta siendo presionado:
+  if (clickState == HIGH) {
+
+    // Si no esta siendo presionado ,  presiónelo:
+
+    if (!Mouse.isPressed(MOUSE_LEFT)) {
+
+      Mouse.press(MOUSE_LEFT);
+
+    }
+
+  }//fin if click state
+
+  // de lo contrario, no se presiona el botón del mouse:
+
+  else {
+
+// si se presiona el mouse, suéltelo:
+
+    if (Mouse.isPressed(MOUSE_LEFT)) {
+
+      Mouse.release(MOUSE_LEFT);
+
+    }
+
+  }
+
+//Condicionales para movimiento del scroll respecto al pin digital que los ponga
+  if (digitalRead(8) == HIGH) {//Es el pin digital del scroll up si lo cambias cambias este parametro 
+    Mouse.move(xDistance, yDistance, 1);
+    delay(responseDelayScroll);
+  }
+    if (digitalRead(7) == HIGH) {//Es el pin digital del scroll up si lo cambias cambias este parametro 
+    Mouse.move(xDistance, yDistance, -1);
+    delay(responseDelayScroll);
+  }
+
+
+//Codigo para click derecho que esta en el pin digital 9 del arduino
+  if(digitalRead(9) == HIGH)
+  {
+        // Si no esta siendo presionado ,  presiónelo:
+
+    if (!Mouse.isPressed(MOUSE_RIGHT)) {
+
+      Mouse.press(MOUSE_RIGHT);
+    
+     }
+  }
+  
+  else {
+
+// si se presiona el mouse, suéltelo:
+
+    if (Mouse.isPressed(MOUSE_RIGHT)) {
+
+      Mouse.release(MOUSE_RIGHT);
+
+    }
+
+  }
+  
+  //Llamo a mi funcion de retardo en respuesta para que no se mueva muy rapido :
+  delay(responseDelay);
+}
+
+
+                    </code>
+                </pre>
+
+            </div>
+
+
+            <p>
+                Dependiendo de tu selección este código se pasará a tu Arduino Leonardo o Micro Pro. Si quieres tener más detalles del código 
+                <a href="https://github.com/silviasalazar/botonera" target="_blank">Click aquí.</a>
+
+            </p>
+               
+        </div>
+
+        <!--Aqui va el Tutorial-->
+        <div class="armado" id="armado">
+            <h1 style="color: #1EA5F7;">4. Armado</h1>
+            <!--5 botones-->
+            <h2 id="d5">Dispositivo con 5 botones</h2>
+            <p>
+                En caso de que tu selección sea el dispositivo con 5 funcionalidades, su estructura quedará de la siguiente manera:
+
+            </p>
+            <div id="imagenes">
+                <img src="./assets/images/img_prot1.PNG" alt="prototipo1">
+            </div>
+
+            <!--8botones-->
+
+            <h2 id="d8">Dispositivo con 8 botones</h2>
+            <p>
+                En caso de que tu selección sea el dispositivo con 8 funcionalidades, su estructura quedará de la siguiente manera:
+
+            </p>
+            <div id="imagenes">
+                <img src="./assets/images/img_prot2.PNG" alt="prototipo2">
+            </div>
+            <!--ensamblado-->
+            <h2 id="soldado">Tutorial de soldado</h2>
+            <p>
+                Soldar es un paso muy importante para que cada uno de los componentes se quede en su lugar y no tener problemas futuros una vez ya armado el prototipo.
+            </p>
+            <div style="display: flex; justify-content: center; width: 100%; padding: 20px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dhnkp762hfQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+
+            <p>
+                Después de soldar cada una de las partes que lo requieran, pasaremos a armar nuestro prototipo:
+            </p>
+            <div id="imagenes">
+                <img src="./assets/images/dimension3d.PNG" alt="" style="max-width: 100%;">
+
+            </div>
+            
+        </div>
+    </div>
+    
+</div> <!--fin container1-->
+
+<!--footer-->
+<footer>
+    <p>
+        &copy; 2021 Copyright.
+    </p>
+
+</footer>
+    
+
+
+
+
+
+    
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>
